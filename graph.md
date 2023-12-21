@@ -12,7 +12,7 @@
     * Using bfs (Kahn's Algorithm): Use Indegree for all nodes. If indegree[i]==0 then push it into queue. When we remove node from queue, reduce indegree of all its neighbours by 1. If indegree is 0 then push that node.
 7. DAG: For DAG, there must be atleast one node with indegree = 0.
 8. __Shortest path in DAG from a src to every other node:__ Use topological sorting. Lets say we are using dfs. So, we have stack where nodes are pushed in stack in topological order. Now, create a distance array and fill it with infinite. Remove all elements from the stack until top is src. Then distance[src]=0. Do the weight relaxation then. If dist[node]+wt < dist[v] then dist[v] = dist[node]+wt;
-9. __Shortest path in undirected graph with unit weight from an src to all nodes:__ 
+9. __Shortest path in undirected graph with unit weight from a src to all nodes:__ 
     * Use BFS. 
     * Create a dist array and initilize it with INT_MAX and queue<pair<int,int>>. 
     * dist[src] = 0
